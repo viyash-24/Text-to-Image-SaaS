@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 export const  AppContext = createContext()
 
 const AppContextProvider=(props)=>{
-          const [user, setUser]= useState(true)
+          const [user, setUser]= useState(null)
 
           const value={
                     user,setUser
@@ -11,7 +11,7 @@ const AppContextProvider=(props)=>{
 
           return (
                     <AppContext.Provider value={value}>
-                              {props.Children}
+                              {props.children}
                     </AppContext.Provider>
           )
 }
