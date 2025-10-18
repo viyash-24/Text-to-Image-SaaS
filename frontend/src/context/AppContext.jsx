@@ -7,7 +7,7 @@ const AppContextProvider=(props)=>{
           const [showLogin,setShowLogin]=useState('false')
 
           const value={
-                    user,setUser,showLogin,setShowLogin
+                    user,setUser,showLogin, setShowLogin
           }
 
           return (
