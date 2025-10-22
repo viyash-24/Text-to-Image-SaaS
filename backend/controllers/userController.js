@@ -7,7 +7,7 @@ const registerUser =async(req,res)=>{
              const {name,email,password} =req.body
 
              if(!name || !email ||!password){
-                    return res.json({sucess:false,message:"Missing Details"})
+                    return res.json({success:false,message:"Missing Details"})
              }
 
              const salt= await bcrypt.genSalt(10)
@@ -42,7 +42,7 @@ const loginUser=async (req,res)=>{
               const user= await userModel.findOne({email})
 
               if(!user){
-                    return res.json({sucess:false,message:"user does not exist"})
+                    return res.json({success:false,message:"user does not exist"})
 
               }
 
@@ -55,7 +55,7 @@ const loginUser=async (req,res)=>{
                      return res.json({success:true, token ,user:{name:user.name}})
 
               }else{
-                     return res.json({sucess:false,message:"Invalid credentials"})
+                     return res.json({success:false,message:"Invalid credentials"})
               }
               
        } catch (error) {
