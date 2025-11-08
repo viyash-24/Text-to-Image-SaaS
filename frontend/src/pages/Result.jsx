@@ -13,7 +13,7 @@ const Result = () => {
   
   const{generateImage} =useContext(AppContext)
 
-  const onSubmitHandler=async (e)=>{
+  const onSubmitHandler = async (e)=>{
 
     e.preventDefault()
     setLoading(true)

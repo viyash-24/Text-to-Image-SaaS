@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 export const  AppContext = createContext()
 
-const AppContextProvider=(props)=>{
+const AppContextProvider = (props)=>{
           const [user, setUser]= useState(null)
           const [showLogin,setShowLogin]=useState(false)
           const [token,setToken]=useState(localStorage.getItem('token'))
@@ -13,10 +13,10 @@ const AppContextProvider=(props)=>{
           const[credit,setCredit] =useState(0)
           const backendUrl= import.meta.env.VITE_BACKEND_URL
 
-          const navigate =useNavigate()
+          const navigate = useNavigate()
 
 
-          const loadCreditsData =async ()=>{
+          const loadCreditsData = async ()=>{
                     try {
                               const {data} =await axios.get(backendUrl +'/api/user/credits' , {headers:{token}})
 
@@ -31,7 +31,7 @@ const AppContextProvider=(props)=>{
                     }
           }
 
-          const generateImage =async (prompt)=>{
+          const generateImage = async (prompt)=>{
                     try {
                       const {data} =  await axios.post(backendUrl + '/api/image/generate-image',{prompt},{headers:{token}})
 
@@ -51,7 +51,7 @@ const AppContextProvider=(props)=>{
                            toast.error(error.message)   
                     }
           }
-          const logout =()=>{
+          const logout = ()=>{
                     localStorage.removeItem('token')
                     setToken('')
                     setUser(null)

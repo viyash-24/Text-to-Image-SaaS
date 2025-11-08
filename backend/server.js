@@ -18,4 +18,4 @@ app.use('/api/user',userRouter)
 app.use('/api/image',imageRouter)
 app.get('/',(req,res)=>res.send ("API working"))
 
-app.listen(PORT ,()=>console.log(`server running on port ${PORT}`))
+app.listen(PORT, ()=>console.log(`server running on port ${PORT}`))
