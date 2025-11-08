@@ -12,14 +12,14 @@ export const generateImage =async(req,res)=>{
               if(!user || !prompt){
                     return res.json({success:false,message:'Missing Details'})
               }
-              if(user.creditBalance ===0 || userModel.creditBalance<0){
+              if(user.creditBalance === 0 || user.creditBalance < 0){
                     return res.json({success:false,message:'No Credit Balance', creditBalance:user.creditBalance})
               }
 
              const formData =new FormData() 
              formData.append('prompt',prompt)
 
-            const {data}= await axios.post('https://clipdrop-api.co/text-to-image/v1',formData,{
+            const {data}= await axios.post('https://clipdrop-api.com/text-to-image/v1',formData,{
                   headers: {
                         'x-api-key': process.env.CLIPDROP_API,
                   },
