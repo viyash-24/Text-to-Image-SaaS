@@ -81,13 +81,22 @@ const userCredits = async(req,res)=>{
        }
 }
 
-const razorpayInstance = new razorpay({
-       key_id:process.env.RAZORPAY_KEY_ID,
-       key_secret:process.env.RAZORPAY_KEY_SECRET,
-})
+let razorpayInstance = null;
+
+// Only initialize Razorpay if credentials are provided
+if (process.env.RAZORPAY_KEY_ID && process.env.RAZORPAY_KEY_SECRET) {
+       razorpayInstance = new razorpay({
+              key_id: process.env.RAZORPAY_KEY_ID,
+              key_secret: process.env.RAZORPAY_KEY_SECRET,
+       });
+}
 
 const paymentRazorpay = async(req,res)=>{
        try {
+              // Check if Razorpay is configured
+              if (!razorpayInstance) {
+                     return res.json({success:false,message:'Payment gateway not configured. Please contact administrator.'})
+              }
 
               const {userId,planId} =req.body 
 
@@ -151,6 +160,11 @@ const paymentRazorpay = async(req,res)=>{
 
 const verifyRazorpay = async (req,res)=>{
     try {
+       // Check if Razorpay is configured
+       if (!razorpayInstance) {
+              return res.json({success:false,message:'Payment gateway not configured. Please contact administrator.'})
+       }
+
        const {razorpay_order_id} =req.body
 
        const orderInfo =await razorpayInstance.orders.fetch(razorpay_order_id)
