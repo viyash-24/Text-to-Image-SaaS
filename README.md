@@ -3,7 +3,7 @@
 A Full Stack AI SaaS Application built using the MERN Stack (MongoDB, Express, React, Node.js) that allows users to generate AI-powered images from text prompts.
 Includes a credit-based system, secure authentication, and online payment integration for purchasing additional credits.
 
-
+.
 
 🚀 Features
 
@@ -25,7 +25,7 @@ A clean, modern, and fully responsive interface optimized for all devices.
 ✅ User Dashboard
 View image generation history, remaining credits, and payment records.
 
-
+.
 
 
 🛠️ Tech Stack
@@ -36,7 +36,7 @@ Database    -	  MongoDB (Mongoose)
 AI API	    -   ClipDrop API
 Authentication -JWT (JSON Web Token)
 Payments	     - Integrated Online Payment Gateway ( Razorpay)
-
+.
 
 ⚙️ Installation & Setup
 
@@ -45,7 +45,6 @@ Follow these steps to run the project locally:
 1️⃣ Clone the Repository
 git clone https://github.com/yourusername/ai-text-to-image-generator.git
 cd ai-text-to-image-generator
-
 
 2️⃣ Install Dependencies
 
@@ -91,7 +90,7 @@ Now open your browser and visit:
 
 http://localhost:3000
 
-
+.
 
 💰 Credit System Overview
 
@@ -101,19 +100,19 @@ Each generated image deducts 1 credit.
 
 When credits run out, users can buy more credits securely via the payment gateway.
 
-
+.
 
 ❤️ Acknowledgements
 
 Special thanks to:
-GreatStack YouTube channel
-ClipDrop API
-MongoDB Atlas
-React
-Node.js
+GreatStack YouTube channel ,
+ClipDrop API ,
+MongoDB Atlas ,
+React ,
+Node.js ,
 Express.js
 
-
+.
 
 
 💻 Developer
