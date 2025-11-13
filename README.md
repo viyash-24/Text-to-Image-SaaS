@@ -1,9 +1,9 @@
-🧠✨ AI Text-to-Image Generator (MERN + ClipDrop API)
+🧠📷 AI Text-to-Image Generator (MERN + ClipDrop API)
 
 A Full Stack AI SaaS Application built using the MERN Stack (MongoDB, Express, React, Node.js) that allows users to generate AI-powered images from text prompts.
 Includes a credit-based system, secure authentication, and online payment integration for purchasing additional credits.
 
-.
+
 
 🚀 Features
 
@@ -24,6 +24,7 @@ A clean, modern, and fully responsive interface optimized for all devices.
 
 ✅ User Dashboard
 View image generation history, remaining credits, and payment records.
+
 
 
 
@@ -56,6 +57,7 @@ npm install
 cd ../frontend
 npm install
 
+
 3️⃣ Add Environment Variables
 
 Create a .env file in both the server and client directories and add:
@@ -69,6 +71,7 @@ PAYMENT_GATEWAY_KEY=your_payment_gateway_key
 For frontend:
 REACT_APP_API_URL=http://localhost:5000
 
+
 4️⃣ Run the Application
 
 Start both frontend and backend:
@@ -77,6 +80,7 @@ open your vs code terminal:
 # Start backend
 cd backend
 npm start /nodemon
+
 
 # Start frontend
 cd ../frontend
@@ -87,6 +91,8 @@ Now open your browser and visit:
 
 http://localhost:3000
 
+
+
 💰 Credit System Overview
 
 New users receive free initial credits upon registration.
@@ -94,6 +100,8 @@ New users receive free initial credits upon registration.
 Each generated image deducts 1 credit.
 
 When credits run out, users can buy more credits securely via the payment gateway.
+
+
 
 ❤️ Acknowledgements
 
@@ -104,6 +112,7 @@ MongoDB Atlas
 React
 Node.js
 Express.js
+
 
 
 
