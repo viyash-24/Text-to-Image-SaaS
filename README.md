@@ -26,6 +26,7 @@ A clean, modern, and fully responsive interface optimized for all devices.
 View image generation history, remaining credits, and payment records.
 
 
+
 🛠️ Tech Stack
 Layer          	Technology
 Frontend	  -   React.js, Tailwind CSS
@@ -43,6 +44,7 @@ Follow these steps to run the project locally:
 1️⃣ Clone the Repository
 git clone https://github.com/yourusername/ai-text-to-image-generator.git
 cd ai-text-to-image-generator
+
 
 2️⃣ Install Dependencies
 
@@ -102,6 +104,7 @@ MongoDB Atlas
 React
 Node.js
 Express.js
+
 
 
 💻 Developer
